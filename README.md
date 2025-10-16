@@ -1,4 +1,4 @@
-# Heart Failure Ensemble Analysis 💓🌲
+# Heart Failure Ensemble Analysis 
 
 This project predicts **heart disease** using **Decision Trees**, **Random Forest**, and **XGBoost**.  
 I integrated **GridSearchCV** to find the best combination of key hyperparameters and visualized model performance with clear **train vs. validation accuracy plots**.
