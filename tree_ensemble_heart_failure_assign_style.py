@@ -1,8 +1,5 @@
-# Tree Ensembles on Heart Failure Prediction (assignment-style)
-# Keep the same flow and plotting style; use GridSearchCV only for (n_estimators, max_depth, min_samples_split / learning_rate)
+# Tree Ensembles on Heart Failure Prediction
 
-import warnings
-warnings.simplefilter("ignore")
 
 import numpy as np
 import pandas as pd
@@ -33,7 +30,7 @@ X = df.drop(columns=[TARGET_COL]).values
 y = df[TARGET_COL].values
 feature_names = [c for c in df.columns if c != TARGET_COL]
 
-# Train / Val / Test to mirror notebook practice (use Val for curves & model selection)
+# Train / Val / Test 
 X_train, X_temp, y_train, y_temp = train_test_split(
     X, y, test_size=0.4, random_state=RANDOM_STATE, stratify=y
 )
