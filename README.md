@@ -2,7 +2,7 @@
 
 This project predicts **heart disease** using **Decision Trees**, **Random Forest**, and **XGBoost**.  
 I integrated **GridSearchCV** to find the best combination of key hyperparameters and visualized model performance with clear **train vs. validation accuracy plots**.
-
+Dataset: Kaggle – Heart Failure Prediction Dataset: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
 ---
 
 ## 🧩 Project Overview
@@ -40,9 +40,18 @@ I plotted **Train vs Validation accuracy** curves for each parameter:
   - `n_estimators`
   - `max_depth`
   - `learning_rate`
+ 
+Decision Tree — Val accuracy: 0.8571
+RF GridSearchCV — best params: {'max_depth': 12, 'min_samples_split': 2, 'n_estimators': 200}
+XGB GridSearchCV — best params: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 200}
 
-These visualizations helped confirm where the models start to overfit and how complexity impacts accuracy.
+Selected model (Val): XGBoost (best GS) — Val: 0.8750 | Test: 0.8696
 
----
+Results Summary
+
+Both ensemble methods performed better than the single Decision Tree.
+XGBoost slightly outperformed Random Forest, showing more stable validation accuracy across parameter sweeps.
+
+
 
 
